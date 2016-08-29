@@ -1,0 +1,13 @@
+<h1>angular2-masonry-demo</h1>
+
+<masonry>
+  <md-card 
+    masonry-brick 
+    *ngFor="let brick of bricks"
+    [class.lg]="brick.size==='lg'"
+    [class.md]="brick.size==='md'"
+    [class.sm]="brick.size==='sm'"
+    (click)="resize(brick)">
+    <h2>{{brick.id}}</h2>
+  </md-card>
+</masonry>

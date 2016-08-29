@@ -1,0 +1,18 @@
+[masonry-brick]{
+    width: 250px;
+    margin: 10px;
+    background: rgb(204, 255, 144);
+    cursor: pointer;
+}
+
+.lg{
+    height: 200px;
+}
+
+.md{
+    height: 100px;
+}
+
+.sm{
+    height: 50px;
+}
