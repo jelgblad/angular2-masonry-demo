@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { AngularMasonry } from 'angular2-masonry';
+
+// Import AngularMasonry and MasonryOptions
+import { AngularMasonry, MasonryOptions } from 'angular2-masonry';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +10,10 @@ import { AngularMasonry } from 'angular2-masonry';
 })
 export class AppComponent {
 
+  // Inject AngularMasonry instance from template
   @ViewChild(AngularMasonry) masonry: AngularMasonry;
 
+  // Some bricks
   bricks = [
     { id: 0, size: 'sm' },
     { id: 1, size: 'sm' },
@@ -29,6 +33,12 @@ export class AppComponent {
     { id: 15, size: 'lg' }
   ];
 
+  // Options
+  options: MasonryOptions = {
+    transitionDuration: '0.3s'
+  }
+
+  // Resize brick
   resize(brick) {
     switch (brick.size) {
       case 'lg':
@@ -42,6 +52,7 @@ export class AppComponent {
         break;
     }
 
+    // Update layout after resize
     this.masonry.layout();
   }
 }

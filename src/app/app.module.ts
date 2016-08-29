@@ -4,8 +4,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
-import { MasonryModule } from 'angular2-masonry';
 import { MdCardModule } from '@angular2-material/card';
+
+// Import MasonryModule
+import { MasonryModule } from 'angular2-masonry';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,10 @@ import { MdCardModule } from '@angular2-material/card';
     BrowserModule,
     CommonModule,
     FormsModule,
-    MasonryModule,
-    MdCardModule
+    MdCardModule,
+
+    // Import MasonryModule in AppModule
+    MasonryModule
   ],
   providers: [],
   entryComponents: [AppComponent],
