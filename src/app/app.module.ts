@@ -1,13 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ApplicationRef } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
-
+import { HttpModule } from '@angular/http';
 import { MdCardModule } from '@angular2-material/card';
+import { MasonryModule } from 'angular2-masonry'; // Import MasonryModule
 
-// Import MasonryModule
-import { MasonryModule } from 'angular2-masonry';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -15,17 +13,12 @@ import { MasonryModule } from 'angular2-masonry';
   ],
   imports: [
     BrowserModule,
-    CommonModule,
     FormsModule,
+    HttpModule,
     MdCardModule,
-
-    // Import MasonryModule in AppModule
-    MasonryModule
+    MasonryModule // Add MasonryModule to AppModule imports
   ],
   providers: [],
-  entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
-}
+export class AppModule { }

@@ -1,12 +1,10 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
-
-// Import AngularMasonry and MasonryOptions
 import { AngularMasonry, MasonryOptions } from 'angular2-masonry';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css']
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit {
 
