@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+[masonry-brick]{
+    width: 250px;
+    margin: 10px;
+    background: rgb(204, 255, 144);
+}
