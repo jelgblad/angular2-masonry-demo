@@ -1,13 +1,20 @@
 <h1>angular2-masonry-demo</h1>
 
-<masonry [options]="options">
+<masonry [options]="options" [useImagesLoaded]="false">
   <md-card 
+    masonry-brick 
+    *ngFor="let brick of bricks">
+    <h2>{{brick.id}}</h2>
+    <img src="{{brick.image}}" style="width:100%;">
+  </md-card>
+
+  <!--<md-card 
     masonry-brick 
     *ngFor="let brick of bricks"
     [class.lg]="brick.size==='lg'"
     [class.md]="brick.size==='md'"
     [class.sm]="brick.size==='sm'"
-    (click)="resize(brick)">
+    (click)="resize(brick)"> 
     <h2>{{brick.id}}</h2>
-  </md-card>
+  </md-card>-->
 </masonry>
