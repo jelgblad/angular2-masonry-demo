@@ -3,7 +3,7 @@
 <button (click)="addText()">Add text brick</button>
 <button (click)="addImage()">Add image brick</button>
 
-<masonry [options]="options" [useImagesLoaded]="false">
+<masonry [options]="options" [useImagesLoaded]="true">
   <md-card masonry-brick *ngFor="let brick of bricks">
     <img *ngIf="brick.image" src="{{brick.image}}" style="width:100%;">
     <p *ngIf="brick.text">{{brick.text}}</p>
